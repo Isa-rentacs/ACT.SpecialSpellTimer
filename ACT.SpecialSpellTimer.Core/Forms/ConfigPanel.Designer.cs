@@ -165,6 +165,8 @@ namespace ACT.SpecialSpellTimer.Forms
             this.TelopDeleteButton = new System.Windows.Forms.Button();
             this.tabControlExtHoriz3 = new ACT.SpecialSpellTimer.Forms.TabControlExtHoriz();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TelopActionStringOnMatch = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
             this.TemporarilyDisplayTickerCheckBox = new System.Windows.Forms.CheckBox();
             this.TelopTitleTextBox = new System.Windows.Forms.TextBox();
             this.TelopMessageTextBox = new System.Windows.Forms.TextBox();
@@ -233,6 +235,8 @@ namespace ACT.SpecialSpellTimer.Forms
             this.OptionTabPage = new System.Windows.Forms.TabPage();
             this.tabControlExtHoriz1 = new ACT.SpecialSpellTimer.Forms.TabControlExtHoriz();
             this.tabOverlayOptions = new System.Windows.Forms.TabPage();
+            this.label71 = new System.Windows.Forms.Label();
+            this.AnimationFPSNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DisableStartConditionCheckBox = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BarBackgroundBrightnessPanel = new System.Windows.Forms.Panel();
@@ -336,8 +340,8 @@ namespace ACT.SpecialSpellTimer.Forms
             this.DQXPlayerNameLabel = new System.Windows.Forms.Label();
             this.DQXAppleyButton = new System.Windows.Forms.Button();
             this.LogTabPage = new System.Windows.Forms.TabPage();
-            this.label71 = new System.Windows.Forms.Label();
-            this.AnimationFPSNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TelopActionStringAfterDelay = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
             this.CombatAnalyzerContextMenuStrip.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.SpecialSpellTabPage.SuspendLayout();
@@ -395,6 +399,7 @@ namespace ACT.SpecialSpellTimer.Forms
             this.OptionTabPage.SuspendLayout();
             this.tabControlExtHoriz1.SuspendLayout();
             this.tabOverlayOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimationFPSNumericUpDown)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.BarBackgroundBrightnessPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BarBackgroundBrightnessNumericUpDown)).BeginInit();
@@ -410,7 +415,6 @@ namespace ACT.SpecialSpellTimer.Forms
             this.panel7.SuspendLayout();
             this.pnlLanguage.SuspendLayout();
             this.DQXOptionTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AnimationFPSNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // CombatAnalyzerContextMenuStrip
@@ -1911,6 +1915,10 @@ namespace ACT.SpecialSpellTimer.Forms
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.AutoScrollMargin = new System.Drawing.Size(10, 40);
+            this.tabPage1.Controls.Add(this.TelopActionStringAfterDelay);
+            this.tabPage1.Controls.Add(this.label73);
+            this.tabPage1.Controls.Add(this.TelopActionStringOnMatch);
+            this.tabPage1.Controls.Add(this.label72);
             this.tabPage1.Controls.Add(this.TemporarilyDisplayTickerCheckBox);
             this.tabPage1.Controls.Add(this.TelopTitleTextBox);
             this.tabPage1.Controls.Add(this.TelopMessageTextBox);
@@ -1945,6 +1953,23 @@ namespace ACT.SpecialSpellTimer.Forms
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "GeneralTab";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // TelopActionStringOnMatch
+            // 
+            this.TelopActionStringOnMatch.Location = new System.Drawing.Point(5, 449);
+            this.TelopActionStringOnMatch.Name = "TelopActionStringOnMatch";
+            this.TelopActionStringOnMatch.Size = new System.Drawing.Size(498, 19);
+            this.TelopActionStringOnMatch.TabIndex = 77;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(3, 434);
+            this.label72.Margin = new System.Windows.Forms.Padding(0);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(113, 12);
+            this.label72.TabIndex = 78;
+            this.label72.Text = "ActionStringOnMatch";
             // 
             // TemporarilyDisplayTickerCheckBox
             // 
@@ -2022,7 +2047,7 @@ namespace ACT.SpecialSpellTimer.Forms
             // 
             // TelopSetConditionButton
             // 
-            this.TelopSetConditionButton.Location = new System.Drawing.Point(306, 439);
+            this.TelopSetConditionButton.Location = new System.Drawing.Point(310, 611);
             this.TelopSetConditionButton.Name = "TelopSetConditionButton";
             this.TelopSetConditionButton.Size = new System.Drawing.Size(144, 25);
             this.TelopSetConditionButton.TabIndex = 75;
@@ -2041,7 +2066,7 @@ namespace ACT.SpecialSpellTimer.Forms
             // 
             // TelopSelectZoneButton
             // 
-            this.TelopSelectZoneButton.Location = new System.Drawing.Point(156, 439);
+            this.TelopSelectZoneButton.Location = new System.Drawing.Point(160, 611);
             this.TelopSelectZoneButton.Name = "TelopSelectZoneButton";
             this.TelopSelectZoneButton.Size = new System.Drawing.Size(144, 25);
             this.TelopSelectZoneButton.TabIndex = 74;
@@ -2070,7 +2095,7 @@ namespace ACT.SpecialSpellTimer.Forms
             // 
             // TelopSelectJobButton
             // 
-            this.TelopSelectJobButton.Location = new System.Drawing.Point(6, 439);
+            this.TelopSelectJobButton.Location = new System.Drawing.Point(10, 611);
             this.TelopSelectJobButton.Name = "TelopSelectJobButton";
             this.TelopSelectJobButton.Size = new System.Drawing.Size(144, 25);
             this.TelopSelectJobButton.TabIndex = 73;
@@ -2695,6 +2720,39 @@ namespace ACT.SpecialSpellTimer.Forms
             this.tabOverlayOptions.Size = new System.Drawing.Size(1063, 708);
             this.tabOverlayOptions.TabIndex = 0;
             this.tabOverlayOptions.Text = "tabOverlayOptions";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(15, 441);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(77, 12);
+            this.label71.TabIndex = 75;
+            this.label71.Text = "AnimationFPS";
+            // 
+            // AnimationFPSNumericUpDown
+            // 
+            this.AnimationFPSNumericUpDown.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.AnimationFPSNumericUpDown.Location = new System.Drawing.Point(291, 439);
+            this.AnimationFPSNumericUpDown.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.AnimationFPSNumericUpDown.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.AnimationFPSNumericUpDown.Name = "AnimationFPSNumericUpDown";
+            this.AnimationFPSNumericUpDown.Size = new System.Drawing.Size(59, 19);
+            this.AnimationFPSNumericUpDown.TabIndex = 74;
+            this.AnimationFPSNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.AnimationFPSNumericUpDown.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // DisableStartConditionCheckBox
             // 
@@ -3824,38 +3882,22 @@ namespace ACT.SpecialSpellTimer.Forms
             this.LogTabPage.Text = "LogTabPage";
             this.LogTabPage.UseVisualStyleBackColor = true;
             // 
-            // label71
+            // TelopActionStringAfterDelay
             // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(15, 441);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(77, 12);
-            this.label71.TabIndex = 75;
-            this.label71.Text = "AnimationFPS";
+            this.TelopActionStringAfterDelay.Location = new System.Drawing.Point(5, 494);
+            this.TelopActionStringAfterDelay.Name = "TelopActionStringAfterDelay";
+            this.TelopActionStringAfterDelay.Size = new System.Drawing.Size(498, 19);
+            this.TelopActionStringAfterDelay.TabIndex = 79;
             // 
-            // AnimationFPSNumericUpDown
+            // label73
             // 
-            this.AnimationFPSNumericUpDown.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.AnimationFPSNumericUpDown.Location = new System.Drawing.Point(291, 439);
-            this.AnimationFPSNumericUpDown.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.AnimationFPSNumericUpDown.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.AnimationFPSNumericUpDown.Name = "AnimationFPSNumericUpDown";
-            this.AnimationFPSNumericUpDown.Size = new System.Drawing.Size(59, 19);
-            this.AnimationFPSNumericUpDown.TabIndex = 74;
-            this.AnimationFPSNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.AnimationFPSNumericUpDown.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(3, 479);
+            this.label73.Margin = new System.Windows.Forms.Padding(0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(123, 12);
+            this.label73.TabIndex = 80;
+            this.label73.Text = "ActionStringAfterDelay";
             // 
             // ConfigPanel
             // 
@@ -3937,6 +3979,7 @@ namespace ACT.SpecialSpellTimer.Forms
             this.tabControlExtHoriz1.ResumeLayout(false);
             this.tabOverlayOptions.ResumeLayout(false);
             this.tabOverlayOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimationFPSNumericUpDown)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.BarBackgroundBrightnessPanel.ResumeLayout(false);
@@ -3958,7 +4001,6 @@ namespace ACT.SpecialSpellTimer.Forms
             this.pnlLanguage.PerformLayout();
             this.DQXOptionTabPage.ResumeLayout(false);
             this.DQXOptionTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AnimationFPSNumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4274,5 +4316,9 @@ namespace ACT.SpecialSpellTimer.Forms
         private System.Windows.Forms.CheckBox DisableStartConditionCheckBox;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.NumericUpDown AnimationFPSNumericUpDown;
+        private System.Windows.Forms.TextBox TelopActionStringOnMatch;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.TextBox TelopActionStringAfterDelay;
+        private System.Windows.Forms.Label label73;
     }
 }

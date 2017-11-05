@@ -5,10 +5,12 @@ namespace ACT.SpecialSpellTimer.Models
     using System.Text.RegularExpressions;
     using System.Timers;
     using System.Xml.Serialization;
+    using System.Windows.Forms;
 
     using ACT.SpecialSpellTimer.Sound;
+    using ACT.SpecialSpellTimer.Utility;
     using FFXIV.Framework.Common;
-
+    using Timer = System.Timers.Timer; 
     /// <summary>
     /// ワンポイントテロップ
     /// </summary>
@@ -47,6 +49,8 @@ namespace ACT.SpecialSpellTimer.Models
             this.Font = new FontInfo();
             this.KeywordReplaced = string.Empty;
             this.KeywordToHideReplaced = string.Empty;
+            this.actionStringOnMatch = string.Empty;
+            this.actionStringAfterDelay = string.Empty;
 
             // ディレイサウンドタイマをセットする
             this.delayedSoundTimer = new Timer
@@ -56,6 +60,7 @@ namespace ACT.SpecialSpellTimer.Models
             };
 
             this.delayedSoundTimer.Elapsed += this.DelayedSoundTimer_Elapsed;
+            this.delayedSoundTimer.Elapsed += this.FireActionStringAfterDelay;
         }
 
         [XmlIgnore]
@@ -143,6 +148,10 @@ namespace ACT.SpecialSpellTimer.Models
         public double Top { get; set; } = 0;
 
         public string ZoneFilter { get; set; }
+
+        public string actionStringOnMatch { get; set; }
+
+        public string actionStringAfterDelay { get; set; }
 
         #region Soundfiles
 
@@ -301,6 +310,36 @@ namespace ACT.SpecialSpellTimer.Models
             }
         }
 
+        internal void FireActionStringOnMatch()
+        {
+            InvokeActionString(this.actionStringOnMatch, isImmediate: true);
+        }
+
+        private void FireActionStringAfterDelay(object sender, ElapsedEventArgs e)
+        {
+            InvokeActionString(this.actionStringAfterDelay, isImmediate: false);
+        }
+
+        /// <summary>
+        /// Interpret string as keystrokes and invoke the command
+        /// </summary>
+        /// <param name="actionString"></param>
+        public static void InvokeActionString(string actionString, bool isImmediate)
+        {
+            string actionType = isImmediate ? "Immediate" : "Delayed";
+            try
+            {
+                SendKeys.SendWait(actionString);
+            }
+            catch (ArgumentException)
+            {
+                Logger.Write(string.Format("{0} action string {1} is invalid.", actionType, actionString));
+            }
+            catch (InvalidOperationException ex)
+            {
+                Logger.Write(string.Format("{0} action threw an InvalidOperationException : {1}", actionType, ex.Message));
+            }
+        }
         #region Clone
 
         public OnePointTelop Clone() => (OnePointTelop)this.MemberwiseClone();

@@ -1257,4 +1257,10 @@
     <value>アニメーションの最大FPS</value>
     <comment>Animation frame rate</comment>
   </data>
+  <data name="ActionStringAfterDelay" xml:space="preserve">
+    <value>ディレイ後のアクション</value>
+  </data>
+  <data name="ActionStringOnMatch" xml:space="preserve">
+    <value>マッチ時のアクション</value>
+  </data>
 </root>

@@ -518,6 +518,9 @@ namespace ACT.SpecialSpellTimer.Forms
                 src.MatchTextToSpeak = this.TelopMatchTTSTextBox.Text;
                 src.DelaySound = (string)this.TelopDelaySoundComboBox.SelectedValue ?? string.Empty;
                 src.DelayTextToSpeak = this.TelopDelayTTSTextBox.Text;
+                // need to add textboxes for these
+                src.actionStringOnMatch = this.TelopActionStringOnMatch.Text;
+                src.actionStringAfterDelay = this.TelopActionStringAfterDelay.Text;
 
                 if ((int)this.TelopLeftNumericUpDown.Tag != src.Left ||
                     (int)this.TelopTopNumericUpDown.Tag != src.Top)

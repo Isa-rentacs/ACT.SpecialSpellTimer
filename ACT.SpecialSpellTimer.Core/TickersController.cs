@@ -174,6 +174,7 @@ namespace ACT.SpecialSpellTimer
 
             if (matched)
             {
+                telop.FireActionStringOnMatch();
                 // ディレイサウンドをスタートさせる
                 telop.StartDelayedSoundTimer();
 
