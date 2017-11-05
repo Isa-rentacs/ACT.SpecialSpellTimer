@@ -46,6 +46,18 @@
     <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.1\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
+    <Reference Include="FFXIV.Framework, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FFXIV.Framework\FFXIV.Framework\bin\Debug\FFXIV.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="FFXIV.Framework.Dialog, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FFXIV.Framework\FFXIV.Framework.Dialog\bin\Debug\FFXIV.Framework.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="FFXIV.Framework.Dialog.Wrapper, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FFXIV.Framework\FFXIV.Framework.Dialog.Wrapper\bin\Debug\FFXIV.Framework.Dialog.Wrapper.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -427,17 +439,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FFXIV.Framework\FFXIV.Framework.Dialog.Wrapper\FFXIV.Framework.Dialog.Wrapper.csproj">
+    <ProjectReference Include="I:\git\clonedSpeSpe\ACT.SpecialSpellTimer\\FFXIV.Framework\FFXIV.Framework.Dialog.Wrapper\FFXIV.Framework.Dialog.Wrapper.csproj">
       <Project>{dd7824d5-f74e-4412-9e87-c7b89e1c6165}</Project>
       <Name>FFXIV.Framework.Dialog.Wrapper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\FFXIV.Framework\FFXIV.Framework.Dialog\FFXIV.Framework.Dialog.csproj">
+    <ProjectReference Include="I:\git\clonedSpeSpe\ACT.SpecialSpellTimer\\FFXIV.Framework\FFXIV.Framework.Dialog\FFXIV.Framework.Dialog.csproj">
       <Project>{5fc72c62-16d6-4f95-aa45-c7ad5f8a7901}</Project>
       <Name>FFXIV.Framework.Dialog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FFXIV.Framework\FFXIV.Framework\FFXIV.Framework.csproj">
-      <Project>{22ebf8a4-eed1-4cd1-99eb-99665163a315}</Project>
-      <Name>FFXIV.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

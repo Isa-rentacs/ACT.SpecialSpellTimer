@@ -35,6 +35,18 @@
       <HintPath>..\..\..\..\Program Files (x86)\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="FFXIV.Framework, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FFXIV.Framework\FFXIV.Framework\bin\Debug\FFXIV.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="FFXIV.Framework.Dialog, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FFXIV.Framework\FFXIV.Framework.Dialog\bin\Debug\FFXIV.Framework.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="FFXIV.Framework.Dialog.Wrapper, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FFXIV.Framework\FFXIV.Framework.Dialog.Wrapper\bin\Debug\FFXIV.Framework.Dialog.Wrapper.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -57,22 +69,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ACT.SpecialSpellTimer.Core\ACT.SpecialSpellTimer.Core.csproj">
+    <ProjectReference Include="$(SolutionDir)\ACT.SpecialSpellTimer.Core\ACT.SpecialSpellTimer.Core.csproj">
       <Project>{ea12d333-f0ed-4524-8bad-b986b0137ea5}</Project>
       <Name>ACT.SpecialSpellTimer.Core</Name>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\FFXIV.Framework\FFXIV.Framework.Dialog.Wrapper\FFXIV.Framework.Dialog.Wrapper.csproj">
+    <ProjectReference Include="I:\git\clonedSpeSpe\ACT.SpecialSpellTimer\\FFXIV.Framework\FFXIV.Framework.Dialog.Wrapper\FFXIV.Framework.Dialog.Wrapper.csproj">
       <Project>{dd7824d5-f74e-4412-9e87-c7b89e1c6165}</Project>
       <Name>FFXIV.Framework.Dialog.Wrapper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\FFXIV.Framework\FFXIV.Framework.Dialog\FFXIV.Framework.Dialog.csproj">
+    <ProjectReference Include="I:\git\clonedSpeSpe\ACT.SpecialSpellTimer\\FFXIV.Framework\FFXIV.Framework.Dialog\FFXIV.Framework.Dialog.csproj">
       <Project>{5fc72c62-16d6-4f95-aa45-c7ad5f8a7901}</Project>
       <Name>FFXIV.Framework.Dialog</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FFXIV.Framework\FFXIV.Framework\FFXIV.Framework.csproj">
-      <Project>{22ebf8a4-eed1-4cd1-99eb-99665163a315}</Project>
-      <Name>FFXIV.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

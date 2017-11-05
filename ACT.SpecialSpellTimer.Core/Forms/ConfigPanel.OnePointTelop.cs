@@ -227,6 +227,9 @@ namespace ACT.SpecialSpellTimer.Forms
             this.DisplayTimeNumericUpDown.Value = (decimal)src.DisplayTime;
             this.EnabledAddMessageCheckBox.Checked = src.AddMessageEnabled;
             this.TelopProgressBarEnabledCheckBox.Checked = src.ProgressBarEnabled;
+            this.TelopActionStringOnMatch.Text = src.ActionStringOnMatch;
+            this.TelopActionStringAfterDelay.Text = src.ActionStringAfterDelay;
+
 
             this.TelopVisualSetting.FontColor = src.FontColor.FromHTML();
             this.TelopVisualSetting.FontOutlineColor = src.FontOutlineColor.FromHTML();
@@ -519,8 +522,8 @@ namespace ACT.SpecialSpellTimer.Forms
                 src.DelaySound = (string)this.TelopDelaySoundComboBox.SelectedValue ?? string.Empty;
                 src.DelayTextToSpeak = this.TelopDelayTTSTextBox.Text;
                 // need to add textboxes for these
-                src.actionStringOnMatch = this.TelopActionStringOnMatch.Text;
-                src.actionStringAfterDelay = this.TelopActionStringAfterDelay.Text;
+                src.ActionStringOnMatch = this.TelopActionStringOnMatch.Text;
+                src.ActionStringAfterDelay = this.TelopActionStringAfterDelay.Text;
 
                 if ((int)this.TelopLeftNumericUpDown.Tag != src.Left ||
                     (int)this.TelopTopNumericUpDown.Tag != src.Top)

@@ -49,8 +49,8 @@ namespace ACT.SpecialSpellTimer.Models
             this.Font = new FontInfo();
             this.KeywordReplaced = string.Empty;
             this.KeywordToHideReplaced = string.Empty;
-            this.actionStringOnMatch = string.Empty;
-            this.actionStringAfterDelay = string.Empty;
+            this.ActionStringOnMatch = string.Empty;
+            this.ActionStringAfterDelay = string.Empty;
 
             // ディレイサウンドタイマをセットする
             this.delayedSoundTimer = new Timer
@@ -149,9 +149,9 @@ namespace ACT.SpecialSpellTimer.Models
 
         public string ZoneFilter { get; set; }
 
-        public string actionStringOnMatch { get; set; }
+        public string ActionStringOnMatch { get; set; }
 
-        public string actionStringAfterDelay { get; set; }
+        public string ActionStringAfterDelay { get; set; }
 
         #region Soundfiles
 
@@ -312,12 +312,12 @@ namespace ACT.SpecialSpellTimer.Models
 
         internal void FireActionStringOnMatch()
         {
-            InvokeActionString(this.actionStringOnMatch, isImmediate: true);
+            InvokeActionString(this.ActionStringOnMatch, isImmediate: true);
         }
 
         private void FireActionStringAfterDelay(object sender, ElapsedEventArgs e)
         {
-            InvokeActionString(this.actionStringAfterDelay, isImmediate: false);
+            InvokeActionString(this.ActionStringAfterDelay, isImmediate: false);
         }
 
         /// <summary>
